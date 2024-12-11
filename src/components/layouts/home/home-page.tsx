@@ -100,7 +100,7 @@ export const HomePage = () => {
                     <Table.Td style={{ position: 'sticky', left: 0, background: 'white' }} key={element.user_name}>{element.user_name}</Table.Td>
                     {element.events.length === 0 && <Table.Td colSpan={element.max_col}></Table.Td>}
                     {element.events.length > 0 &&
-                        element.events.map((e, ind) => {
+                        element.events.map((e) => {
                             return (
                                 <>
                                     {e.offset > 0 && <Table.Td key={e.id} colSpan={e.offset}></Table.Td>}
@@ -122,7 +122,7 @@ export const HomePage = () => {
                     <Table.Td key={element.user_name}>{element.user_name}</Table.Td>
                     {element.events.length === 0 && <Table.Td colSpan={element.max_col}></Table.Td>}
                     {element.events.length > 0 &&
-                        element.events.map((e, ind) => {
+                        element.events.map((e) => {
                             return (
                                 <>
                                     {e.offset > 0 && <Table.Td key={e.id} colSpan={e.offset}></Table.Td>}
@@ -142,7 +142,7 @@ export const HomePage = () => {
                     <Table.Td style={{ position: 'sticky', left: 0, background: 'white' }} key={element.user_name}>{element.user_name}</Table.Td>
                     {element.events.length === 0 && <Table.Td colSpan={element.max_col}></Table.Td>}
                     {element.events.length > 0 &&
-                        element.events.map((e, ind) => {
+                        element.events.map((e) => {
                             return (
                                 <>
                                     {e.offset > 0 && <Table.Td key={e.id} colSpan={e.offset}></Table.Td>}

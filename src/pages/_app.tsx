@@ -1,7 +1,7 @@
 // import "@/styles/globals.css";
 
 import { Providers } from "../providers";
-import { AppShell, Burger } from "@mantine/core";
+import { AppShell } from "@mantine/core";
 import type { AppProps } from "next/app";
 
 import '@mantine/core/styles.css';
@@ -20,7 +20,7 @@ type AppPropsWithAuth = AppProps & {
 // app shell has styles that work with Layout component
 const App = ({ Component, pageProps }: AppPropsWithAuth) => {
 
-  const [opened, { toggle }] = useDisclosure();
+  const [opened] = useDisclosure();
   // console.log('APP.tsx', Component.requireAuth)
 
 

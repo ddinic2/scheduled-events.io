@@ -1,10 +1,10 @@
-import axios from "../../../lib/axios";
+// import axios from "../../../lib/axios";
 // import { useMeStore } from "@/stores/me";
 import { Center, Loader } from "@mantine/core";
 // import { useSession } from "next-auth/react";
 import { useRouter } from "next/router";
 import { useEffect } from "react";
-import { Routes } from "../../../routes";
+// import { Routes } from "../../../routes";
 
 type Props = {
   children: React.ReactElement;

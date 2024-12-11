@@ -2,16 +2,17 @@ import { MantineProvider } from "./mantine-provider";
 import React, { useMemo } from "react";
 import { QueryClient, QueryClientProvider } from "react-query";
 import { ModalsProvider } from "./modal-provider";
+import { Session } from "inspector/promises";
 // import { InterceptorProvider } from "./interceptor-provider";
 // import { Notifications } from "@mantine/notifications";
 // import { SocketProvider } from "./socket-provider";
 
 type ProvidersProps = {
   children: React.ReactNode;
-  session: any;
+  session: Session;
 };
 
-export const Providers = ({ children, session }: ProvidersProps) => {
+export const Providers = ({ children }: ProvidersProps) => {
   const queryClient = useMemo(
     () =>
       new QueryClient({

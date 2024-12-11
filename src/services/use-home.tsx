@@ -1,6 +1,5 @@
 import axios from "../lib/axios";
-import { useEffect, useState } from "react";
-import { useMutation, useQuery } from "react-query";
+import { useQuery } from "react-query";
 import moment from "moment";
 import { useDatesFromStore } from "@/stores/dates-store";
 
@@ -23,9 +22,9 @@ export const useHomeData = () => {
     const fetchHomeDataFn = async () => {
         const response = await axios.get("/dashboard/overview?from=" + moment(from).format('YYYY-MM-DDTHH:mm:ss') + '&to=' + moment(to).format('YYYY-MM-DDTHH:mm:ss'))
         try {
-            const headers = response && response.data && response.data.length ? Object.keys(response.data[0]).map((key) =>
-                `${key}`,
-            ) : [];
+            // const headers = response && response.data && response.data.length ? Object.keys(response.data[0]).map((key) =>
+            //     `${key}`,
+            // ) : [];
 
             // console.log('RESPONSE HOME, ', response.data)
             return response.data;

@@ -1,4 +1,4 @@
-import { Box, Flex } from "@mantine/core";
+import { Flex } from "@mantine/core";
 import Head from "next/head";
 import React from "react";
 
@@ -7,7 +7,7 @@ type PageLayoutProps = {
     children?: React.ReactNode;
 };
 
-export const PageLayout = ({ title, children }: PageLayoutProps) => {
+export const PageLayout = ({ children }: PageLayoutProps) => {
 
     return (
         <>
