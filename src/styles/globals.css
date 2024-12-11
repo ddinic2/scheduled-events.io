@@ -40,3 +40,14 @@ a {
     color-scheme: dark;
   }
 }
+
+
+.mantine-Table-table td,
+.mantine-Table-table th {
+  border-right: 1px solid #96989b;
+}
+
+.mantine-Table-table th:last-of-type,
+.mantine-Table-table td:last-of-type {
+  border-right: none;
+}
