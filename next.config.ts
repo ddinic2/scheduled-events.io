@@ -26,16 +26,16 @@ const nextConfig: NextConfig = {
         source: "/(.*)", // Apply headers to all routes
         headers: [
           {
+            key: "X-Frame-Options",
+            value: "ALLOWALL", // OR "SAMEORIGIN" if you want to limit it to your own domain
+          },
+          {
             key: "Access-Control-Allow-Origin",
             value: "*", // Or restrict to your FSM domain
           },
           {
             key: "Access-Control-Allow-Methods",
             value: "GET,POST,PUT,DELETE,OPTIONS",
-          },
-          {
-            key: "X-Frame-Options",
-            value: "ALLOW-FROM https://your-fsm-container.com", // Allow FSM to embed your site
           },
           {
             key: "Content-Security-Policy",
