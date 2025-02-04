@@ -8,6 +8,7 @@ import '@mantine/core/styles.css';
 import '@mantine/dates/styles.css';
 import { useDisclosure } from "@mantine/hooks";
 import Header from "../components/header/header";
+import StaticExample from "@/components/layouts/home/static-example";
 
 
 // requireAuth is used to check if the page requires authentication
@@ -25,36 +26,37 @@ const App = ({ Component, pageProps }: AppPropsWithAuth) => {
 
 
   return (
-    <Providers session={pageProps.session}>
-      <AppShell
-        header={{ height: 60 }}
-        navbar={{
-          width: 0,
-          breakpoint: 'sm',
-          collapsed: { mobile: !opened },
-        }}
-        padding="md"
-      >
-        <AppShell.Header>
-          {/* <Burger
-            opened={opened}
-            onClick={toggle}
-            hiddenFrom="sm"
-            size="sm"
-          /> */}
-          <Header />
-        </AppShell.Header>
+    // <Providers session={pageProps.session}>
+    //   <AppShell
+    //     header={{ height: 60 }}
+    //     navbar={{
+    //       width: 0,
+    //       breakpoint: 'sm',
+    //       collapsed: { mobile: !opened },
+    //     }}
+    //     padding="md"
+    //   >
+    //     <AppShell.Header>
+    //       {/* <Burger
+    //         opened={opened}
+    //         onClick={toggle}
+    //         hiddenFrom="sm"
+    //         size="sm"
+    //       /> */}
+    //       <Header />
+    //     </AppShell.Header>
 
-        {/* <AppShell.Navbar p="md">Navbar</AppShell.Navbar> */}
+    //     {/* <AppShell.Navbar p="md">Navbar</AppShell.Navbar> */}
 
-        <AppShell.Main style={{
-              margin: '0',
-              padding: '60px 0'
-        }}><Component {...pageProps} /></AppShell.Main>
-      </AppShell>
+    //     <AppShell.Main style={{
+    //           margin: '0',
+    //           padding: '60px 0'
+    //     }}><Component {...pageProps} /></AppShell.Main>
+    //   </AppShell>
 
 
-    </Providers>
+    // </Providers>
+    <StaticExample type="DAY"/>
   );
 };
 
