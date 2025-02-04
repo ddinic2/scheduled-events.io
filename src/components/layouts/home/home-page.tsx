@@ -3,7 +3,7 @@ import { ReactNode, useEffect } from "react";
 import moment from "moment";
 // import { useHomeData } from "@/services/use-home";
 import { usePreviewModalStore } from "@/stores/preview-mode-store";
-import { fakeDayData, fakeMonthData, fakeWeekData } from "@/const";
+// import { fakeDayData, fakeMonthData, fakeWeekData } from "@/const";
 import { useDatesFromStore } from "@/stores/dates-store";
 import StaticExample from "./static-example";
 
@@ -108,73 +108,73 @@ export const HomePage = () => {
         }
     }
 
-    const getRows = (): ReactNode => {
-        if (mode === 'DAY') {
-            return fakeDayData?.map((element) => (
-                <Table.Tr key={element.id}>
-                    <Table.Td rowSpan={2} style={{ position: 'sticky', left: 0, background: 'white' }} key={element.user_name}>{element.user_name}</Table.Td>
-                    {element.events.length === 0 && <Table.Td rowSpan={2} colSpan={element.max_col}></Table.Td>}
-                    {element.events.length > 0 &&
-                        element.events.map((e, ind) => {
-                            return (
-                                <>
-                                    {e.offset > 0 && <Table.Td rowSpan={2} key={e.id} colSpan={e.offset}></Table.Td>}
-                                    {e.colspan > 0 && <Table.Td rowSpan={2} key={e.id + '_colspan'} colSpan={e.colspan}><Box onClick={() => { alert(e.event_name) }} ta={"center"} style={{ borderRadius: "5px", cursor: 'pointer' }} c={"white"} bg={getRandomColor()}>{e.event_name}</Box></Table.Td>}
-                                </>
+    // const getRows = (): ReactNode => {
+    //     if (mode === 'DAY') {
+    //         return fakeDayData?.map((element) => (
+    //             <Table.Tr key={element.id}>
+    //                 <Table.Td rowSpan={2} style={{ position: 'sticky', left: 0, background: 'white' }} key={element.user_name}>{element.user_name}</Table.Td>
+    //                 {element.events.length === 0 && <Table.Td rowSpan={2} colSpan={element.max_col}></Table.Td>}
+    //                 {element.events.length > 0 &&
+    //                     element.events.map((e, ind) => {
+    //                         return (
+    //                             <>
+    //                                 {e.offset > 0 && <Table.Td rowSpan={2} key={e.id} colSpan={e.offset}></Table.Td>}
+    //                                 {e.colspan > 0 && <Table.Td rowSpan={2} key={e.id + '_colspan'} colSpan={e.colspan}><Box onClick={() => { alert(e.event_name) }} ta={"center"} style={{ borderRadius: "5px", cursor: 'pointer' }} c={"white"} bg={getRandomColor()}>{e.event_name}</Box></Table.Td>}
+    //                             </>
 
-                            )
-                        })
+    //                         )
+    //                     })
 
-                    }
-                    {/* {element.offset > 0 && <Table.Td colSpan={element.offset}></Table.Td>}
-                    {element.colspan > 0 && <Table.Td colSpan={element.colspan}><Box ta={"center"} style={{borderRadius: "5px"}} c={"white"} bg={getRandomColor()}>{element.event_name}</Box></Table.Td>} */}
-                </Table.Tr>
-            ));
-        }
-        if (mode === 'WEEK') {
-            return fakeWeekData?.map((element) => (
-                <Table.Tr key={element.id}>
-                    <Table.Td key={element.user_name}>{element.user_name}</Table.Td>
-                    {element.events.length === 0 && <Table.Td colSpan={element.max_col}></Table.Td>}
-                    {element.events.length > 0 &&
-                        element.events.map((e, ind) => {
-                            return (
-                                <>
-                                    {e.offset > 0 && <Table.Td key={e.id} colSpan={e.offset}></Table.Td>}
-                                    {e.colspan > 0 && <Table.Td key={e.id + '_colspan'} colSpan={e.colspan}><Box onClick={() => { alert(e.event_name) }} ta={"center"} style={{ borderRadius: "5px", cursor: 'pointer' }} c={"white"} bg={getRandomColor()}>{e.event_name}</Box></Table.Td>}
-                                </>
+    //                 }
+    //                 {/* {element.offset > 0 && <Table.Td colSpan={element.offset}></Table.Td>}
+    //                 {element.colspan > 0 && <Table.Td colSpan={element.colspan}><Box ta={"center"} style={{borderRadius: "5px"}} c={"white"} bg={getRandomColor()}>{element.event_name}</Box></Table.Td>} */}
+    //             </Table.Tr>
+    //         ));
+    //     }
+    //     if (mode === 'WEEK') {
+    //         return fakeWeekData?.map((element) => (
+    //             <Table.Tr key={element.id}>
+    //                 <Table.Td key={element.user_name}>{element.user_name}</Table.Td>
+    //                 {element.events.length === 0 && <Table.Td colSpan={element.max_col}></Table.Td>}
+    //                 {element.events.length > 0 &&
+    //                     element.events.map((e, ind) => {
+    //                         return (
+    //                             <>
+    //                                 {e.offset > 0 && <Table.Td key={e.id} colSpan={e.offset}></Table.Td>}
+    //                                 {e.colspan > 0 && <Table.Td key={e.id + '_colspan'} colSpan={e.colspan}><Box onClick={() => { alert(e.event_name) }} ta={"center"} style={{ borderRadius: "5px", cursor: 'pointer' }} c={"white"} bg={getRandomColor()}>{e.event_name}</Box></Table.Td>}
+    //                             </>
 
-                            )
-                        })
+    //                         )
+    //                     })
 
-                    }
-                </Table.Tr>
-            ));
-        }
-        if (mode === 'MONTH') {
-            return fakeMonthData?.map((element) => (
-                <Table.Tr key={element.id}>
-                    <Table.Td style={{ position: 'sticky', left: 0, background: 'white' }} key={element.user_name}>{element.user_name}</Table.Td>
-                    {element.events.length === 0 && <Table.Td colSpan={element.max_col}></Table.Td>}
-                    {element.events.length > 0 &&
-                        element.events.map((e, ind) => {
-                            return (
-                                <>
-                                    {e.offset > 0 && <Table.Td key={e.id} colSpan={e.offset}></Table.Td>}
-                                    {e.colspan > 0 && <Table.Td key={e.id + '_colspan'} colSpan={e.colspan}><Box onClick={() => { alert(e.event_name) }} ta={"center"} style={{ borderRadius: "5px", cursor: 'pointer' }} c={"white"} bg={getRandomColor()}>{e.event_name}</Box></Table.Td>}
-                                </>
+    //                 }
+    //             </Table.Tr>
+    //         ));
+    //     }
+    //     if (mode === 'MONTH') {
+    //         return fakeMonthData?.map((element) => (
+    //             <Table.Tr key={element.id}>
+    //                 <Table.Td style={{ position: 'sticky', left: 0, background: 'white' }} key={element.user_name}>{element.user_name}</Table.Td>
+    //                 {element.events.length === 0 && <Table.Td colSpan={element.max_col}></Table.Td>}
+    //                 {element.events.length > 0 &&
+    //                     element.events.map((e, ind) => {
+    //                         return (
+    //                             <>
+    //                                 {e.offset > 0 && <Table.Td key={e.id} colSpan={e.offset}></Table.Td>}
+    //                                 {e.colspan > 0 && <Table.Td key={e.id + '_colspan'} colSpan={e.colspan}><Box onClick={() => { alert(e.event_name) }} ta={"center"} style={{ borderRadius: "5px", cursor: 'pointer' }} c={"white"} bg={getRandomColor()}>{e.event_name}</Box></Table.Td>}
+    //                             </>
 
-                            )
-                        })
+    //                         )
+    //                     })
 
-                    }
-                    {/* {element.offset > 0 && <Table.Td colSpan={element.offset}></Table.Td>}
-                    {element.colspan > 0 && <Table.Td colSpan={element.colspan}><Box ta={"center"} style={{borderRadius: "5px"}} c={"white"} bg={getRandomColor()}>{element.event_name}</Box></Table.Td>} */}
-                </Table.Tr>
-            ));
-        }
+    //                 }
+    //                 {/* {element.offset > 0 && <Table.Td colSpan={element.offset}></Table.Td>}
+    //                 {element.colspan > 0 && <Table.Td colSpan={element.colspan}><Box ta={"center"} style={{borderRadius: "5px"}} c={"white"} bg={getRandomColor()}>{element.event_name}</Box></Table.Td>} */}
+    //             </Table.Tr>
+    //         ));
+    //     }
 
-    }
+    // }
 
     // if (isLoading) {
     //     return (
