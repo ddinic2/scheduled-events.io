@@ -2,6 +2,14 @@
   "routes": [
     {
       "route": "/*",
+      "methods": [
+        "GET",
+        "POST",
+        "OPTIONS",
+        "PUT",
+        "DELETE",
+        "PATCH"
+      ],
       "headers": {
         "X-Frame-Options": "ALLOWALL",
         "Content-Security-Policy": "frame-ancestors *;",
