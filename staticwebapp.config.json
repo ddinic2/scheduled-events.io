@@ -2,12 +2,21 @@
   "routes": [
     {
       "route": "/*",
+      "methods": [
+        "GET",
+        "POST",
+        "OPTIONS",
+        "PUT",
+        "DELETE",
+        "PATCH"
+      ],
       "headers": {
         "X-Frame-Options": "ALLOWALL",
-        "Content-Security-Policy": "frame-ancestors *;",
+        "Content-Security-Policy": "frame-ancestors 'self' https://*.coresystems.net https://*.cloud.sap;",
         "Access-Control-Allow-Origin": "*",
-        "Access-Control-Allow-Methods": "GET, POST, OPTIONS",
-        "Access-Control-Allow-Headers": "Content-Type, Authorization"
+        "Access-Control-Allow-Methods": "GET, POST, OPTIONS, PUT, DELETE, PATCH",
+        "Access-Control-Allow-Headers": "Content-Type, Authorization",
+        "Access-Control-Allow-Credentials": "true"
       }
     }
   ]
