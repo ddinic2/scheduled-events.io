@@ -1,7 +1,7 @@
 import { Box, Center, Flex, Loader, Table } from "@mantine/core";
 import { ReactNode, useEffect } from "react";
 import moment from "moment";
-import { useHomeData } from "@/services/use-home";
+// import { useHomeData } from "@/services/use-home";
 import { usePreviewModalStore } from "@/stores/preview-mode-store";
 import { fakeDayData, fakeMonthData, fakeWeekData } from "@/const";
 import { useDatesFromStore } from "@/stores/dates-store";
@@ -17,9 +17,9 @@ export const HomePage = () => {
     const beginigOfWeek = moment().startOf("week").toDate()
     const endOfWeek = moment().endOf("week").toDate()
 
-    const {
-        readHomeData: { data: tdata, isLoading, isError, refetch },
-    } = useHomeData()
+    // const {
+    //     readHomeData: { data: tdata, isLoading, isError, refetch },
+    // } = useHomeData()
     const { setFrom, from, setTo, to } = useDatesFromStore()
 
     const { mode } = usePreviewModalStore();
