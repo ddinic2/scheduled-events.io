@@ -9,6 +9,7 @@ import '@mantine/dates/styles.css';
 import { useDisclosure } from "@mantine/hooks";
 import Header from "../components/header/header";
 import StaticExample from "@/components/layouts/home/static-example";
+import { usePreviewModalStore } from "@/stores/preview-mode-store";
 
 
 // requireAuth is used to check if the page requires authentication
@@ -23,6 +24,8 @@ const App = ({ Component, pageProps }: AppPropsWithAuth) => {
 
   const [opened, { toggle }] = useDisclosure();
   // console.log('APP.tsx', Component.requireAuth)
+
+  const { mode } = usePreviewModalStore();
 
 
   return (
@@ -56,7 +59,14 @@ const App = ({ Component, pageProps }: AppPropsWithAuth) => {
 
 
     // </Providers>
-    <StaticExample type="DAY"/>
+    <>
+      <Providers session={pageProps.session}>
+        <Header />
+        <StaticExample type={mode} />
+      </Providers>
+
+    </>
+
   );
 };
 
