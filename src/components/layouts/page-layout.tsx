@@ -18,7 +18,7 @@ export const PageLayout = ({ title, children }: PageLayoutProps) => {
                 <link rel="icon" href="/favicon.ico" />
             </Head>
 
-            <Flex display="block" direction="column" h="100%">
+            <Flex display="block" direction="column" h="100%" style={{margin: '0', padding: '0'}}>
                 {children}
             </Flex>
         </>

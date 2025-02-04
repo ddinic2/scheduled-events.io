@@ -51,3 +51,69 @@ a {
 .mantine-Table-table td:last-of-type {
   border-right: none;
 }
+
+
+/* static table example */
+
+body {
+  font-family: Arial, sans-serif;
+  font-size: 10px;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+/* Add black background to every second row */
+tr:nth-child(even) {
+border-bottom: 3px solid #dddddd;
+}
+th {
+border-right: 3px solid gray;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  text-align: center;
+  padding: 5px;
+  word-wrap: break-word;
+}
+th {
+  background-color: #eaeaea;
+  font-weight: bold;
+}
+.left-column {
+  background-color: #e0f7fa; /* Light blue */
+  font-weight: bold;
+  text-align: left;
+}
+.highlight {
+  background-color: #d5fdd5; /* Light green */
+  color: black;
+  font-size: 8px;
+  text-align: left;
+}
+.highlight-red {
+  background-color: #fdd5d5; /* Light red */
+  color: black;
+  font-size: 8px;
+  text-align: left;
+}
+.highlight-gray {
+  background-color: lightgray; /* Light red */
+  color: black;
+  font-size: 8px;
+  text-align: left;
+}
+@media screen and (max-width: 600px) {
+  th, td {
+      font-size: 8px;
+      padding: 3px;
+  }
+  .left-column {
+      font-size: 8px;
+  }
+}

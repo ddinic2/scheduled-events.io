@@ -1,4 +1,4 @@
-// import "@/styles/globals.css";
+import "@/styles/globals.css";
 
 import { Providers } from "../providers";
 import { AppShell, Burger } from "@mantine/core";
@@ -47,7 +47,10 @@ const App = ({ Component, pageProps }: AppPropsWithAuth) => {
 
         {/* <AppShell.Navbar p="md">Navbar</AppShell.Navbar> */}
 
-        <AppShell.Main><Component {...pageProps} /></AppShell.Main>
+        <AppShell.Main style={{
+              margin: '0',
+              padding: '60px 0'
+        }}><Component {...pageProps} /></AppShell.Main>
       </AppShell>
 
 
