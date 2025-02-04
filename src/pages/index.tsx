@@ -30,6 +30,9 @@ export default function Home() {
         <meta charSet="utf-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport" />
+        <meta http-equiv="Content-Security-Policy" content="frame-ancestors *;" />
+        <meta name="referrer" content="no-referrer-when-downgrade" />
+        
       </Head>
       <HomePage />
     </PageLayout>
