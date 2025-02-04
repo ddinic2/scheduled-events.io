@@ -12,7 +12,7 @@
       ],
       "headers": {
         "X-Frame-Options": "ALLOWALL",
-        "Content-Security-Policy": "frame-ancestors *;",
+        "Content-Security-Policy": "frame-ancestors 'self' *;",
         "Access-Control-Allow-Origin": "*",
         "Access-Control-Allow-Methods": "GET, POST, OPTIONS, PUT, DELETE, PATCH",
         "Access-Control-Allow-Headers": "Content-Type, Authorization",
