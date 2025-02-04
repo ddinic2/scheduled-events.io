@@ -24,6 +24,8 @@ export default function Home() {
         <meta name="description" content="Scheduled events" />
         <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
+        <meta httpEquiv="X-Frame-Options" content="ALLOWALL" />
+        <meta httpEquiv="Content-Security-Policy" content="frame-ancestors *:" />
       </Head>
       <HomePage />
     </PageLayout>
