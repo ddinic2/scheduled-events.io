@@ -78,14 +78,13 @@ const Header = () => {
 
     return (
         <>
-            <Flex direction="row" pt="xs" pr="md" pl="md" justify={"center"} align={"center"} >
+            <Flex direction="row" pt="xs" pr="md" pl="md" justify={"center"} align={"center"} pb={"md"}>
                 <Box style={{ display: "block", overflow: "auto", flexGrow: 1 }}>
                     <UnstyledButton onClick={() => { openPreviewMode() }}><IconLineHeight /></UnstyledButton>
                 </Box>
                 <Box style={{ display: "block", overflow: "auto", flexGrow: 1 }}>
                     <UnstyledButton>
                         <IconCaretLeftFilled onClick={goPrevious} />
-                        jk1
                     </UnstyledButton>
                 </Box>
 
