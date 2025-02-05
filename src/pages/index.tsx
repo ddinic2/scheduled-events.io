@@ -24,8 +24,6 @@ export default function Home() {
         <meta name="description" content="Scheduled events" />
         <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
-        {/* <meta http-equiv="Content-Security-Policy" content="frame-ancestors *;" />
-        <meta name="referrer" content="no-referrer-when-downgrade" /> */}
 
         <meta charSet="utf-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
