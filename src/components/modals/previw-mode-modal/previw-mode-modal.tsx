@@ -9,7 +9,7 @@ export const PreviewModeModal = () => {
         <Modal opened={isOpen} onClose={close} size="sm" withCloseButton={true} title={"Select mode"}>
             <Select
                 data={
-                    ['DAY', 'WEEK', 'MONTH']?.map((p: any) => {
+                    ['DAY', 'WEEK']?.map((p: any) => {
                         return { value: p, label: p, key: p };
                     }) || []
                 }
@@ -20,6 +20,8 @@ export const PreviewModeModal = () => {
                     setMode(v ? v : "")
                 }}
             />
+
+{/* , 'MONTH' */}
 
         </Modal>
     );

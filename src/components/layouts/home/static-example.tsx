@@ -9,7 +9,7 @@ const StaticExample = ({ type }: StaticExampleProps) => {
                 <table>
                     <thead>
                         <tr>
-                            <th style={{ width: '50px' }}>Employees</th>
+                            <th style={{ width: '60px' }}>Employees</th>
                             <th colSpan={2}>07h</th>
                             <th colSpan={2}>08h</th>
                             <th colSpan={2}>09h</th>
@@ -723,7 +723,7 @@ const StaticExample = ({ type }: StaticExampleProps) => {
                 <table>
                     <thead>
                         <tr>
-                            <th style={{ width: '50px' }}>Employees</th>
+                            <th style={{ width: '60px' }}>Employees</th>
                             <th colSpan={2}>Mon 2.2.</th>
                             <th colSpan={2}>Tue 4.2.</th>
                             <th colSpan={2}>Wed 5.2.</th>
