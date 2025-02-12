@@ -1,6 +1,7 @@
 import React from "react";
 import { ModalsProvider as MantineModalsProvider } from "@mantine/modals";
 import { PreviewModeModal } from "@/components/modals/previw-mode-modal/previw-mode-modal";
+import { PreviewEventModal } from "@/components/modals/preview-event-modal/preview-event-modal";
 
 
 
@@ -15,6 +16,7 @@ export const ModalsProvider = ({ children }: ModalsProviderProps) => {
             <MantineModalsProvider>
                 {children}
                 <PreviewModeModal />
+                <PreviewEventModal />
             </MantineModalsProvider>
         </>
     );

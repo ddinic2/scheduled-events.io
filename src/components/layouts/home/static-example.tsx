@@ -1,8 +1,19 @@
+import { usePreviewEventModalStore } from "@/stores/preview-event-modal-store";
+
 interface StaticExampleProps {
     type: string;
 }
 
 const StaticExample = ({ type }: StaticExampleProps) => {
+
+const {open, setEvent} = usePreviewEventModalStore()
+
+const setEv =(name:string) => {
+    setEvent(name)
+    open()
+}
+
+
     return (
         <>
             {type === 'DAY' &&
@@ -25,7 +36,7 @@ const StaticExample = ({ type }: StaticExampleProps) => {
                     <tbody>
                         <tr>
                             <td rowSpan={2} className="left-column">Gut K.</td>
-                            <td colSpan={8} className="highlight">Demontage NAK 160 ab TS Lauihof Walchwil</td>
+                            <td colSpan={8} className="highlight" onClick={()=>{setEv("Demontage NAK 160 ab TS Lauihof Walchwil")}}>Demontage NAK 160 ab TS Lauihof Walchwil</td>
                             <td></td>
                             <td></td>
                             <td></td>
@@ -41,10 +52,10 @@ const StaticExample = ({ type }: StaticExampleProps) => {
                         <tr>
                             <td></td>
                             <td></td>
-                            <td colSpan={7} className="highlight-red">KSR Kalibrierung</td>
+                            <td colSpan={7} className="highlight-red" onClick={()=>{setEv("KSR Kalibrierung")}}>KSR Kalibrierung</td>
 
                             <td></td>
-                            <td colSpan={9} className="highlight">Montage Bauwasserständer</td>
+                            <td colSpan={9} className="highlight" onClick={()=>{setEv("Montage Bauwasserständer")}}>Montage Bauwasserständer</td>
 
                         </tr>
                         <tr>
@@ -53,7 +64,7 @@ const StaticExample = ({ type }: StaticExampleProps) => {
                             <td></td>
                             <td></td>
                             <td></td>
-                            <td colSpan={4} className="highlight">NS VK Seehof, Cham</td>
+                            <td colSpan={4} className="highlight" onClick={()=>{setEv("NS VK Seehof, Cham")}}>NS VK Seehof, Cham</td>
                             <td></td>
                             <td></td>
                             <td></td>
@@ -80,7 +91,7 @@ const StaticExample = ({ type }: StaticExampleProps) => {
                             <td></td>
                             <td></td>
                             <td></td>
-                            <td colSpan={5} className="highlight">NS VK Seehof, Cham</td>
+                            <td colSpan={5} className="highlight" onClick={()=>{setEv("NS VK Seehof, Cham")}}>NS VK Seehof, Cham</td>
                             <td></td>
                             <td></td>
                             <td></td>
@@ -88,7 +99,7 @@ const StaticExample = ({ type }: StaticExampleProps) => {
                         </tr>
                         <tr>
                             <td rowSpan={2} className="left-column">Jovan K.</td>
-                            <td colSpan={8} className="highlight">Demontage NAK 160 ab TS Lauihof Walchwil</td>
+                            <td colSpan={8} className="highlight" onClick={()=>{setEv("Demontage NAK 160 ab TS Lauihof Walchwil")}}>Demontage NAK 160 ab TS Lauihof Walchwil</td>
                             <td></td>
                             <td></td>
                             <td></td>
@@ -104,10 +115,10 @@ const StaticExample = ({ type }: StaticExampleProps) => {
                         <tr>
                             <td></td>
                             <td></td>
-                            <td colSpan={7} className="highlight-red">KSR Kalibrierung</td>
+                            <td colSpan={7} className="highlight-red" onClick={()=>{setEv("KSR Kalibrierung")}}>KSR Kalibrierung</td>
 
                             <td></td>
-                            <td colSpan={9} className="highlight">Montage Bauwasserständer</td>
+                            <td colSpan={9} className="highlight" onClick={()=>{setEv("Montage Bauwasserständer")}}>Montage Bauwasserständer</td>
 
                         </tr>
                         <tr>
@@ -116,7 +127,7 @@ const StaticExample = ({ type }: StaticExampleProps) => {
                             <td></td>
                             <td></td>
                             <td></td>
-                            <td colSpan={4} className="highlight">NS VK Seehof, Cham</td>
+                            <td colSpan={4} className="highlight" onClick={()=>{setEv("NS VK Seehof, Cham")}}>NS VK Seehof, Cham</td>
                             <td></td>
                             <td></td>
                             <td></td>
@@ -143,7 +154,7 @@ const StaticExample = ({ type }: StaticExampleProps) => {
                             <td></td>
                             <td></td>
                             <td></td>
-                            <td colSpan={5} className="highlight">NS VK Seehof, Cham</td>
+                            <td colSpan={5} className="highlight" onClick={()=>{setEv("NS VK Seehof, Cham")}}>NS VK Seehof, Cham</td>
                             <td></td>
                             <td></td>
                             <td></td>
@@ -206,7 +217,7 @@ const StaticExample = ({ type }: StaticExampleProps) => {
                             <td></td>
                             <td></td>
                             <td></td>
-                            <td colSpan={5} className="highlight">NS VK Seehof, Cham</td>
+                            <td colSpan={5} className="highlight" onClick={()=>{setEv("NS VK Seehof, Cham")}}>NS VK Seehof, Cham</td>
                             <td></td>
                             <td></td>
                             <td></td>
@@ -269,7 +280,7 @@ const StaticExample = ({ type }: StaticExampleProps) => {
                             <td></td>
                             <td></td>
                             <td></td>
-                            <td colSpan={5} className="highlight">NS VK Seehof, Cham</td>
+                            <td colSpan={5} className="highlight" onClick={()=>{setEv("NS VK Seehof, Cham")}}>NS VK Seehof, Cham</td>
                             <td></td>
                             <td></td>
                             <td></td>
@@ -332,7 +343,7 @@ const StaticExample = ({ type }: StaticExampleProps) => {
                             <td></td>
                             <td></td>
                             <td></td>
-                            <td colSpan={5} className="highlight">NS VK Seehof, Cham</td>
+                            <td colSpan={5} className="highlight" onClick={()=>{setEv("NS VK Seehof, Cham")}}>NS VK Seehof, Cham</td>
                             <td></td>
                             <td></td>
                             <td></td>
@@ -368,7 +379,7 @@ const StaticExample = ({ type }: StaticExampleProps) => {
                             <td></td>
                             <td></td>
                             <td></td>
-                            <td colSpan={4} className="highlight">NS VK Seehof, Cham</td>
+                            <td colSpan={4} className="highlight" onClick={()=>{setEv("NS VK Seehof, Cham")}}>NS VK Seehof, Cham</td>
                             <td></td>
                             <td></td>
                             <td></td>
@@ -395,7 +406,7 @@ const StaticExample = ({ type }: StaticExampleProps) => {
                             <td></td>
                             <td></td>
                             <td></td>
-                            <td colSpan={5} className="highlight">NS VK Seehof, Cham</td>
+                            <td colSpan={5} className="highlight" onClick={()=>{setEv("NS VK Seehof, Cham")}}>NS VK Seehof, Cham</td>
                             <td></td>
                             <td></td>
                             <td></td>
@@ -431,7 +442,7 @@ const StaticExample = ({ type }: StaticExampleProps) => {
                             <td></td>
                             <td></td>
                             <td></td>
-                            <td colSpan={4} className="highlight">NS VK Seehof, Cham</td>
+                            <td colSpan={4} className="highlight" onClick={()=>{setEv("NS VK Seehof, Cham")}}>NS VK Seehof, Cham</td>
                             <td></td>
                             <td></td>
                             <td></td>
@@ -458,7 +469,7 @@ const StaticExample = ({ type }: StaticExampleProps) => {
                             <td></td>
                             <td></td>
                             <td></td>
-                            <td colSpan={5} className="highlight">NS VK Seehof, Cham</td>
+                            <td colSpan={5} className="highlight" onClick={()=>{setEv("NS VK Seehof, Cham")}}>NS VK Seehof, Cham</td>
                             <td></td>
                             <td></td>
                             <td></td>
@@ -494,7 +505,7 @@ const StaticExample = ({ type }: StaticExampleProps) => {
                             <td></td>
                             <td></td>
                             <td></td>
-                            <td colSpan={4} className="highlight">NS VK Seehof, Cham</td>
+                            <td colSpan={4} className="highlight" onClick={()=>{setEv("NS VK Seehof, Cham")}}>NS VK Seehof, Cham</td>
                             <td></td>
                             <td></td>
                             <td></td>
@@ -521,7 +532,7 @@ const StaticExample = ({ type }: StaticExampleProps) => {
                             <td></td>
                             <td></td>
                             <td></td>
-                            <td colSpan={5} className="highlight">NS VK Seehof, Cham</td>
+                            <td colSpan={5} className="highlight" onClick={()=>{setEv("NS VK Seehof, Cham")}}>NS VK Seehof, Cham</td>
                             <td></td>
                             <td></td>
                             <td></td>
@@ -557,7 +568,7 @@ const StaticExample = ({ type }: StaticExampleProps) => {
                             <td></td>
                             <td></td>
                             <td></td>
-                            <td colSpan={4} className="highlight">NS VK Seehof, Cham</td>
+                            <td colSpan={4} className="highlight" onClick={()=>{setEv("NS VK Seehof, Cham")}}>NS VK Seehof, Cham</td>
                             <td></td>
                             <td></td>
                             <td></td>
@@ -584,7 +595,7 @@ const StaticExample = ({ type }: StaticExampleProps) => {
                             <td></td>
                             <td></td>
                             <td></td>
-                            <td colSpan={5} className="highlight">NS VK Seehof, Cham</td>
+                            <td colSpan={5} className="highlight" onClick={()=>{setEv("NS VK Seehof, Cham")}}>NS VK Seehof, Cham</td>
                             <td></td>
                             <td></td>
                             <td></td>
@@ -620,7 +631,7 @@ const StaticExample = ({ type }: StaticExampleProps) => {
                             <td></td>
                             <td></td>
                             <td></td>
-                            <td colSpan={4} className="highlight">NS VK Seehof, Cham</td>
+                            <td colSpan={4} className="highlight" onClick={()=>{setEv("NS VK Seehof, Cham")}}>NS VK Seehof, Cham</td>
                             <td></td>
                             <td></td>
                             <td></td>
@@ -647,7 +658,7 @@ const StaticExample = ({ type }: StaticExampleProps) => {
                             <td></td>
                             <td></td>
                             <td></td>
-                            <td colSpan={5} className="highlight">NS VK Seehof, Cham</td>
+                            <td colSpan={5} className="highlight" onClick={()=>{setEv("NS VK Seehof, Cham")}}>NS VK Seehof, Cham</td>
                             <td></td>
                             <td></td>
                             <td></td>
